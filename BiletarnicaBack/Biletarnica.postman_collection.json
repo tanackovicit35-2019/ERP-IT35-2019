@@ -1,0 +1,3838 @@
+{
+	"info": {
+		"_postman_id": "b9e4585f-4542-4ba3-bd80-455211f42537",
+		"name": "Biletarnica",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21323629"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "LoginKupca",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"lazic.m\",\r\n  \"lozinka\": \"lazalaza\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/login",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosLogin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"lazic.m\",\r\n  \"lozinka\": \"lazala\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/login",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LoginZaposlenog",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"peric.p\",\r\n  \"lozinka\": \"pera123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/login",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosLogin2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"peric\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/login",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registracija",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"korisnickoIme\": \"sakica\",\r\n  \"lozinka\": \"saki456\",\r\n  \"ime\": \"Sara\",\r\n  \"prezime\": \"Mitic\",\r\n  \"email\": \"test@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/register",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosRegistracija",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"korisnickoIme\": \"sakica\",\r\n  \"lozinka\": \"saki456\",\r\n  \"ime\": \"Sara\",\r\n  \"prezime\": \"Mitic\",\r\n  \"email\": \"stefan.1@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/register",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "StavkaPorudzbine",
+			"item": [
+				{
+					"name": "GetStavkaKupac",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Imt1cGFjIiwibmJmIjoxNjgxMjI3Mzg0LCJleHAiOjE2ODE0ODY1ODQsImlzcyI6IkJpbGV0YXJuaWNhQmFjayJ9.WyyZm8xndHXd5oRLyR5nVvmk8A1IyMjcIDfnAIx_kSE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7026/api/orderItem/item",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"orderItem",
+								"item"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetStavkaZaposleni",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InphcG9zbGVuaSIsIm5iZiI6MTY4MTIxODQwNCwiZXhwIjoxNjgxNDc3NjA0LCJpc3MiOiJCaWxldGFybmljYUJhY2sifQ.AQZIXCCvx4MgqF4uNFmiBpHRT-py8-zNZip6aRtXwHw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7026/api/orderItem",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"orderItem"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosGetStavkaKupac",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7026/api/orderItem/item",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"orderItem",
+								"item"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosGetStavkaZaposleni",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7026/api/orderItem",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"orderItem"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetStavkaByID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Imt1cGFjIiwibmJmIjoxNjgxMjIwMTQ5LCJleHAiOjE2ODE0NzkzNDksImlzcyI6IkJpbGV0YXJuaWNhQmFjayJ9.sc2OqyqUWe73Svarg6hikJHStwNTXS2IWEhEhuq4PLs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7026/api/orderItem/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"orderItem",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosGetStavkaByID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Imt1cGFjIiwibmJmIjoxNjgxMjIwMTQ5LCJleHAiOjE2ODE0NzkzNDksImlzcyI6IkJpbGV0YXJuaWNhQmFjayJ9.sc2OqyqUWe73Svarg6hikJHStwNTXS2IWEhEhuq4PLs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7026/api/orderItem/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"orderItem",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosGetStavkaByID3",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InphcG9zbGVuaSIsIm5iZiI6MTY4MTIxOTExNSwiZXhwIjoxNjgxNDc4MzE1LCJpc3MiOiJCaWxldGFybmljYUJhY2sifQ.ZsEuMCyw6njfMVGBCx3T2Uo6J3CvcuIxBZnlFQ90IDg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7026/api/orderItem/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"orderItem",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosGetStavkaByID2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7026/api/orderItem/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"orderItem",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostStavka",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Imt1cGFjIiwibmJmIjoxNjgxMjIwMTQ5LCJleHAiOjE2ODE0NzkzNDksImlzcyI6IkJpbGV0YXJuaWNhQmFjayJ9.sc2OqyqUWe73Svarg6hikJHStwNTXS2IWEhEhuq4PLs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"kolicina\": 12,\r\n  \"cenaStavke\": 700,\r\n  \"kartaID\": 3,\r\n  \"porudzbinaID\": 6 \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/orderItem",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"orderItem"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosPostStavka2",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InphcG9zbGVuaSIsIm5iZiI6MTY4MTIyNzU0MywiZXhwIjoxNjgxNDg2NzQzLCJpc3MiOiJCaWxldGFybmljYUJhY2sifQ.wTurpxmxBcggAPgmk2QaNAwt-LfI01wnNhTbVyNQlp4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"kolicina\": 12,\r\n  \"cenaStavke\": 700,\r\n  \"kartaID\": 3,\r\n  \"porudzbinaID\": 5 \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/orderItem",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"orderItem"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosPostStavka",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Imt1cGFjIiwibmJmIjoxNjgxMjIwMTQ5LCJleHAiOjE2ODE0NzkzNDksImlzcyI6IkJpbGV0YXJuaWNhQmFjayJ9.sc2OqyqUWe73Svarg6hikJHStwNTXS2IWEhEhuq4PLs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"kolicina\": 300,\r\n  \"cenaStavke\": 700,\r\n  \"kartaID\": 3,\r\n  \"porudzbinaID\": 5 \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/orderItem",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"orderItem"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PutStavka",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Imt1cGFjIiwibmJmIjoxNjgxMjI1NzU2LCJleHAiOjE2ODE0ODQ5NTYsImlzcyI6IkJpbGV0YXJuaWNhQmFjayJ9.wuLDTontS6yAV-WjSMWYrhMGhDl3-9l8tTtC8teCp84",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"stavkaID\": 1,\r\n  \"kolicina\": 5,\r\n  \"cenaStavke\": 700,\r\n  \"kartaID\": 3,\r\n  \"porudzbinaID\": 1,\r\n  \"kartaEntity\": {\r\n    \"kartaID\": 0,\r\n    \"cenaKarte\": 0,\r\n    \"datumOdrzavanja\": \"2023-04-11T15:12:47.920Z\",\r\n    \"dogadjajID\": 0,\r\n    \"izvodjacID\": 0,\r\n    \"kategorijaID\": 0,\r\n    \"naStanju\": 0,\r\n    \"izvodjacDto\": {\r\n      \"izvodjacID\": 0,\r\n      \"nazivIzvodjaca\": \"string\"\r\n    },\r\n    \"kategorijaDto\": {\r\n      \"kategorijaID\": 0,\r\n      \"nazivKategorije\": \"string\"\r\n    },\r\n    \"dogadjajDto\": {\r\n      \"dogadjajID\": 0,\r\n      \"nazivDogadjaja\": \"string\"\r\n    }\r\n  },\r\n  \"porudzbinaEntity\": {\r\n    \"porudzbinaID\": 0,\r\n    \"datum\": \"2023-04-11T15:12:47.920Z\",\r\n    \"ukupnaCena\": 0,\r\n    \"korisnikID\": 0,\r\n    \"korisnikEntity\": {\r\n      \"korisnikID\": 0,\r\n      \"korisnickoIme\": \"string\",\r\n      \"lozinka\": \"string\",\r\n      \"ime\": \"string\",\r\n      \"prezime\": \"string\",\r\n      \"email\": \"string\",\r\n      \"uloga\": \"string\"\r\n    }\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/orderItem",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"orderItem"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosPutStavka3",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Imt1cGFjIiwibmJmIjoxNjgxMjI1NzU2LCJleHAiOjE2ODE0ODQ5NTYsImlzcyI6IkJpbGV0YXJuaWNhQmFjayJ9.wuLDTontS6yAV-WjSMWYrhMGhDl3-9l8tTtC8teCp84",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"stavkaID\": 47,\r\n  \"kolicina\": 5,\r\n  \"cenaStavke\": 700,\r\n  \"kartaID\": 3,\r\n  \"porudzbinaID\": 1,\r\n  \"kartaEntity\": {\r\n    \"kartaID\": 0,\r\n    \"cenaKarte\": 0,\r\n    \"datumOdrzavanja\": \"2023-04-11T15:12:47.920Z\",\r\n    \"dogadjajID\": 0,\r\n    \"izvodjacID\": 0,\r\n    \"kategorijaID\": 0,\r\n    \"naStanju\": 0,\r\n    \"izvodjacDto\": {\r\n      \"izvodjacID\": 0,\r\n      \"nazivIzvodjaca\": \"string\"\r\n    },\r\n    \"kategorijaDto\": {\r\n      \"kategorijaID\": 0,\r\n      \"nazivKategorije\": \"string\"\r\n    },\r\n    \"dogadjajDto\": {\r\n      \"dogadjajID\": 0,\r\n      \"nazivDogadjaja\": \"string\"\r\n    }\r\n  },\r\n  \"porudzbinaEntity\": {\r\n    \"porudzbinaID\": 0,\r\n    \"datum\": \"2023-04-11T15:12:47.920Z\",\r\n    \"ukupnaCena\": 0,\r\n    \"korisnikID\": 0,\r\n    \"korisnikEntity\": {\r\n      \"korisnikID\": 0,\r\n      \"korisnickoIme\": \"string\",\r\n      \"lozinka\": \"string\",\r\n      \"ime\": \"string\",\r\n      \"prezime\": \"string\",\r\n      \"email\": \"string\",\r\n      \"uloga\": \"string\"\r\n    }\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/orderItem",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"orderItem"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosPutStavka",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InphcG9zbGVuaSIsIm5iZiI6MTY4MTIyNzAyMSwiZXhwIjoxNjgxNDg2MjIxLCJpc3MiOiJCaWxldGFybmljYUJhY2sifQ.6ypnps7VRh9eF02ZUkZ54H_Oah6WtfqDSpNCgPvfqlM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"stavkaID\": 1,\r\n  \"kolicina\": 5,\r\n  \"cenaStavke\": 700,\r\n  \"kartaID\": 3,\r\n  \"porudzbinaID\": 1,\r\n  \"kartaEntity\": {\r\n    \"kartaID\": 0,\r\n    \"cenaKarte\": 0,\r\n    \"datumOdrzavanja\": \"2023-04-11T15:12:47.920Z\",\r\n    \"dogadjajID\": 0,\r\n    \"izvodjacID\": 0,\r\n    \"kategorijaID\": 0,\r\n    \"naStanju\": 0,\r\n    \"izvodjacDto\": {\r\n      \"izvodjacID\": 0,\r\n      \"nazivIzvodjaca\": \"string\"\r\n    },\r\n    \"kategorijaDto\": {\r\n      \"kategorijaID\": 0,\r\n      \"nazivKategorije\": \"string\"\r\n    },\r\n    \"dogadjajDto\": {\r\n      \"dogadjajID\": 0,\r\n      \"nazivDogadjaja\": \"string\"\r\n    }\r\n  },\r\n  \"porudzbinaEntity\": {\r\n    \"porudzbinaID\": 0,\r\n    \"datum\": \"2023-04-11T15:12:47.920Z\",\r\n    \"ukupnaCena\": 0,\r\n    \"korisnikID\": 0,\r\n    \"korisnikEntity\": {\r\n      \"korisnikID\": 0,\r\n      \"korisnickoIme\": \"string\",\r\n      \"lozinka\": \"string\",\r\n      \"ime\": \"string\",\r\n      \"prezime\": \"string\",\r\n      \"email\": \"string\",\r\n      \"uloga\": \"string\"\r\n    }\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/orderItem",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"orderItem"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosPutStavka2",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Imt1cGFjIiwibmJmIjoxNjgxMjI3Mzg0LCJleHAiOjE2ODE0ODY1ODQsImlzcyI6IkJpbGV0YXJuaWNhQmFjayJ9.WyyZm8xndHXd5oRLyR5nVvmk8A1IyMjcIDfnAIx_kSE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"stavkaID\": 7,\r\n  \"kolicina\": 5,\r\n  \"cenaStavke\": 700,\r\n  \"kartaID\": 3,\r\n  \"porudzbinaID\": 1,\r\n  \"kartaEntity\": {\r\n    \"kartaID\": 0,\r\n    \"cenaKarte\": 0,\r\n    \"datumOdrzavanja\": \"2023-04-11T15:12:47.920Z\",\r\n    \"dogadjajID\": 0,\r\n    \"izvodjacID\": 0,\r\n    \"kategorijaID\": 0,\r\n    \"naStanju\": 0,\r\n    \"izvodjacDto\": {\r\n      \"izvodjacID\": 0,\r\n      \"nazivIzvodjaca\": \"string\"\r\n    },\r\n    \"kategorijaDto\": {\r\n      \"kategorijaID\": 0,\r\n      \"nazivKategorije\": \"string\"\r\n    },\r\n    \"dogadjajDto\": {\r\n      \"dogadjajID\": 0,\r\n      \"nazivDogadjaja\": \"string\"\r\n    }\r\n  },\r\n  \"porudzbinaEntity\": {\r\n    \"porudzbinaID\": 0,\r\n    \"datum\": \"2023-04-11T15:12:47.920Z\",\r\n    \"ukupnaCena\": 0,\r\n    \"korisnikID\": 0,\r\n    \"korisnikEntity\": {\r\n      \"korisnikID\": 0,\r\n      \"korisnickoIme\": \"string\",\r\n      \"lozinka\": \"string\",\r\n      \"ime\": \"string\",\r\n      \"prezime\": \"string\",\r\n      \"email\": \"string\",\r\n      \"uloga\": \"string\"\r\n    }\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/orderItem",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"orderItem"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteStavka",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Imt1cGFjIiwibmJmIjoxNjgxMjI3ODQ2LCJleHAiOjE2ODE0ODcwNDYsImlzcyI6IkJpbGV0YXJuaWNhQmFjayJ9.KlCVNrAzU91kQoK64anNRKpmDK2kI52JW5MLwmXX2-Y",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7026/api/orderItem/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"orderItem",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosDeleteStavka",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Imt1cGFjIiwibmJmIjoxNjgxMjI3ODQ2LCJleHAiOjE2ODE0ODcwNDYsImlzcyI6IkJpbGV0YXJuaWNhQmFjayJ9.KlCVNrAzU91kQoK64anNRKpmDK2kI52JW5MLwmXX2-Y",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7026/api/orderItem/27",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"orderItem",
+								"27"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosDeleteStavka2",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InphcG9zbGVuaSIsIm5iZiI6MTY4MTIyODM0MywiZXhwIjoxNjgxNDg3NTQzLCJpc3MiOiJCaWxldGFybmljYUJhY2sifQ.NSM3EJ5RecXoRwcjd8IbPIE7CEQL-cl3PdEWfoKKrgE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7026/api/orderItem/3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"orderItem",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosDeleteStavka3",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7026/api/orderItem/3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"orderItem",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Porudzbina",
+			"item": [
+				{
+					"name": "GetPorudzbinaZaposleni",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InphcG9zbGVuaSIsIm5iZiI6MTY4MTIyODUwNiwiZXhwIjoxNjgxNDg3NzA2LCJpc3MiOiJCaWxldGFybmljYUJhY2sifQ.1k92Wv3-Gtaa0euUCcmTKwMdJ9fw5yqbOUEuMNM3yrE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7026/api/orders",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosGetPorudzbinaZaposleni",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7026/api/orders",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPorudzbinaByID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InphcG9zbGVuaSIsIm5iZiI6MTY4MTIyODUwNiwiZXhwIjoxNjgxNDg3NzA2LCJpc3MiOiJCaWxldGFybmljYUJhY2sifQ.1k92Wv3-Gtaa0euUCcmTKwMdJ9fw5yqbOUEuMNM3yrE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7026/api/orders/4",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"orders",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosGetPorudzbinaByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7026/api/orders/4",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"orders",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosGetPorudzbinaByID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InphcG9zbGVuaSIsIm5iZiI6MTY4MTIyODUwNiwiZXhwIjoxNjgxNDg3NzA2LCJpc3MiOiJCaWxldGFybmljYUJhY2sifQ.1k92Wv3-Gtaa0euUCcmTKwMdJ9fw5yqbOUEuMNM3yrE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7026/api/orders/77",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"orders",
+								"77"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosGetPorudzbinaByID2",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Imt1cGFjIiwibmJmIjoxNjgxMjI4NDgyLCJleHAiOjE2ODE0ODc2ODIsImlzcyI6IkJpbGV0YXJuaWNhQmFjayJ9.wM0gpEmUm31EVaFyTqtWkKbdwb30kU4dMJVyQ-jImOc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7026/api/orders/4",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"orders",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPorudzbinaKupac",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Imt1cGFjIiwibmJmIjoxNjgxMjI4NDgyLCJleHAiOjE2ODE0ODc2ODIsImlzcyI6IkJpbGV0YXJuaWNhQmFjayJ9.wM0gpEmUm31EVaFyTqtWkKbdwb30kU4dMJVyQ-jImOc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7026/api/orders/order",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"orders",
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosGetPorudzbinaKupac",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7026/api/orders/order",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"orders",
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostPorudzbina",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Imt1cGFjIiwibmJmIjoxNjgxMjI4NDgyLCJleHAiOjE2ODE0ODc2ODIsImlzcyI6IkJpbGV0YXJuaWNhQmFjayJ9.wM0gpEmUm31EVaFyTqtWkKbdwb30kU4dMJVyQ-jImOc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"datum\": \"2023-04-11T16:25:17.874Z\",\r\n  \"ukupnaCena\": 0,\r\n  \"korisnikID\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/orders",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosPostPorudzbina2",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InphcG9zbGVuaSIsIm5iZiI6MTY4MTIyODUwNiwiZXhwIjoxNjgxNDg3NzA2LCJpc3MiOiJCaWxldGFybmljYUJhY2sifQ.1k92Wv3-Gtaa0euUCcmTKwMdJ9fw5yqbOUEuMNM3yrE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"datum\": \"2023-03-11T16:25:17.874Z\",\r\n  \"ukupnaCena\": 0,\r\n  \"korisnikID\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/orders",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosPostPorudzbina",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"datum\": \"2023-04-11T16:25:17.874Z\",\r\n  \"ukupnaCena\": 0,\r\n  \"korisnikID\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/orders",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PutPorudzbina",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Imt1cGFjIiwibmJmIjoxNjgxMjI4NDgyLCJleHAiOjE2ODE0ODc2ODIsImlzcyI6IkJpbGV0YXJuaWNhQmFjayJ9.wM0gpEmUm31EVaFyTqtWkKbdwb30kU4dMJVyQ-jImOc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"porudzbinaID\": 4,\r\n  \"datum\": \"2023-03-10T16:30:42.671Z\",\r\n  \"ukupnaCena\": 0,\r\n  \"korisnikID\": 2,\r\n  \"korisnikEntity\": {\r\n    \"korisnikID\": 0,\r\n    \"korisnickoIme\": \"string\",\r\n    \"lozinka\": \"string\",\r\n    \"ime\": \"string\",\r\n    \"prezime\": \"string\",\r\n    \"email\": \"string\",\r\n    \"uloga\": \"string\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/orders",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosPutPorudzbina4",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Imt1cGFjIiwibmJmIjoxNjgxMjI4NDgyLCJleHAiOjE2ODE0ODc2ODIsImlzcyI6IkJpbGV0YXJuaWNhQmFjayJ9.wM0gpEmUm31EVaFyTqtWkKbdwb30kU4dMJVyQ-jImOc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"porudzbinaID\": 4,\r\n  \"datum\": \"2023-04-10T16:30:42.671Z\",\r\n  \"ukupnaCena\": 0,\r\n  \"korisnikID\": 3,\r\n  \"korisnikEntity\": {\r\n    \"korisnikID\": 0,\r\n    \"korisnickoIme\": \"string\",\r\n    \"lozinka\": \"string\",\r\n    \"ime\": \"string\",\r\n    \"prezime\": \"string\",\r\n    \"email\": \"string\",\r\n    \"uloga\": \"string\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/orders",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosPutPorudzbina",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Imt1cGFjIiwibmJmIjoxNjgxMjI4NDgyLCJleHAiOjE2ODE0ODc2ODIsImlzcyI6IkJpbGV0YXJuaWNhQmFjayJ9.wM0gpEmUm31EVaFyTqtWkKbdwb30kU4dMJVyQ-jImOc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"porudzbinaID\": 42,\r\n  \"datum\": \"2023-04-10T16:30:42.671Z\",\r\n  \"ukupnaCena\": 0,\r\n  \"korisnikID\": 2,\r\n  \"korisnikEntity\": {\r\n    \"korisnikID\": 0,\r\n    \"korisnickoIme\": \"string\",\r\n    \"lozinka\": \"string\",\r\n    \"ime\": \"string\",\r\n    \"prezime\": \"string\",\r\n    \"email\": \"string\",\r\n    \"uloga\": \"string\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/orders",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosPutPorudzbina2",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"porudzbinaID\": 4,\r\n  \"datum\": \"2023-04-10T16:30:42.671Z\",\r\n  \"ukupnaCena\": 0,\r\n  \"korisnikID\": 2,\r\n  \"korisnikEntity\": {\r\n    \"korisnikID\": 0,\r\n    \"korisnickoIme\": \"string\",\r\n    \"lozinka\": \"string\",\r\n    \"ime\": \"string\",\r\n    \"prezime\": \"string\",\r\n    \"email\": \"string\",\r\n    \"uloga\": \"string\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/orders",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosPutPorudzbina3",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InphcG9zbGVuaSIsIm5iZiI6MTY4MTIyODUwNiwiZXhwIjoxNjgxNDg3NzA2LCJpc3MiOiJCaWxldGFybmljYUJhY2sifQ.1k92Wv3-Gtaa0euUCcmTKwMdJ9fw5yqbOUEuMNM3yrE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"porudzbinaID\": 4,\r\n  \"datum\": \"2023-04-10T16:30:42.671Z\",\r\n  \"ukupnaCena\": 0,\r\n  \"korisnikID\": 2,\r\n  \"korisnikEntity\": {\r\n    \"korisnikID\": 0,\r\n    \"korisnickoIme\": \"string\",\r\n    \"lozinka\": \"string\",\r\n    \"ime\": \"string\",\r\n    \"prezime\": \"string\",\r\n    \"email\": \"string\",\r\n    \"uloga\": \"string\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/orders",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletePorudzbina",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Imt1cGFjIiwibmJmIjoxNjgxMjI4NDgyLCJleHAiOjE2ODE0ODc2ODIsImlzcyI6IkJpbGV0YXJuaWNhQmFjayJ9.wM0gpEmUm31EVaFyTqtWkKbdwb30kU4dMJVyQ-jImOc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7026/api/orders/7",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"orders",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosDeletePorudzbina",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Imt1cGFjIiwibmJmIjoxNjgxMjI4NDgyLCJleHAiOjE2ODE0ODc2ODIsImlzcyI6IkJpbGV0YXJuaWNhQmFjayJ9.wM0gpEmUm31EVaFyTqtWkKbdwb30kU4dMJVyQ-jImOc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7026/api/orders/77",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"orders",
+								"77"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosDeletePorudzbina3",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InphcG9zbGVuaSIsIm5iZiI6MTY4MTIyODUwNiwiZXhwIjoxNjgxNDg3NzA2LCJpc3MiOiJCaWxldGFybmljYUJhY2sifQ.1k92Wv3-Gtaa0euUCcmTKwMdJ9fw5yqbOUEuMNM3yrE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7026/api/orders/5",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"orders",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosDeletePorudzbina2",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7026/api/orders/7",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"orders",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Dogadjaj",
+			"item": [
+				{
+					"name": "GetDogadjaj",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7026/api/events",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetDogadjajByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7026/api/events/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"events",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7026/api/events/28",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"events",
+								"28"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostDogadjaj",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InphcG9zbGVuaSIsIm5iZiI6MTY4MTIxOTExNSwiZXhwIjoxNjgxNDc4MzE1LCJpc3MiOiJCaWxldGFybmljYUJhY2sifQ.ZsEuMCyw6njfMVGBCx3T2Uo6J3CvcuIxBZnlFQ90IDg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nazivDogadjaja\": \"test123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/events",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosPostDogadjaja",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nazivDogadjaja\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/events",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosPostDogadjaja2",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Imt1cGFjIiwibmJmIjoxNjgxMjIwMTQ5LCJleHAiOjE2ODE0NzkzNDksImlzcyI6IkJpbGV0YXJuaWNhQmFjayJ9.sc2OqyqUWe73Svarg6hikJHStwNTXS2IWEhEhuq4PLs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nazivDogadjaja\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/events",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PutDogadjaj",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InphcG9zbGVuaSIsIm5iZiI6MTY4MTIxOTExNSwiZXhwIjoxNjgxNDc4MzE1LCJpc3MiOiJCaWxldGFybmljYUJhY2sifQ.ZsEuMCyw6njfMVGBCx3T2Uo6J3CvcuIxBZnlFQ90IDg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"dogadjajID\": 1,\r\n  \"nazivDogadjaja\": \"Koncert\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/events",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosPutDogadjaj3",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InphcG9zbGVuaSIsIm5iZiI6MTY4MTIxOTExNSwiZXhwIjoxNjgxNDc4MzE1LCJpc3MiOiJCaWxldGFybmljYUJhY2sifQ.ZsEuMCyw6njfMVGBCx3T2Uo6J3CvcuIxBZnlFQ90IDg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"dogadjajID\": 77,\r\n  \"nazivDogadjaja\": \"Koncert\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/events",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosPutDogadjaj",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"dogadjajID\": 1,\r\n  \"nazivDogadjaja\": \"Koncert\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/events",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosPutDogadjaj2",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Imt1cGFjIiwibmJmIjoxNjgxMjIwMTQ5LCJleHAiOjE2ODE0NzkzNDksImlzcyI6IkJpbGV0YXJuaWNhQmFjayJ9.sc2OqyqUWe73Svarg6hikJHStwNTXS2IWEhEhuq4PLs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"dogadjajID\": 1,\r\n  \"nazivDogadjaja\": \"Koncert\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/events",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteDogadjaj",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InphcG9zbGVuaSIsIm5iZiI6MTY4MTIxOTExNSwiZXhwIjoxNjgxNDc4MzE1LCJpc3MiOiJCaWxldGFybmljYUJhY2sifQ.ZsEuMCyw6njfMVGBCx3T2Uo6J3CvcuIxBZnlFQ90IDg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7026/api/events/12",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"events",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteDogadjaj3",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Imt1cGFjIiwibmJmIjoxNjgxMjIwMTQ5LCJleHAiOjE2ODE0NzkzNDksImlzcyI6IkJpbGV0YXJuaWNhQmFjayJ9.sc2OqyqUWe73Svarg6hikJHStwNTXS2IWEhEhuq4PLs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7026/api/events/12",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"events",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosDeleteDogadjaj",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InphcG9zbGVuaSIsIm5iZiI6MTY4MTIxOTExNSwiZXhwIjoxNjgxNDc4MzE1LCJpc3MiOiJCaWxldGFybmljYUJhY2sifQ.ZsEuMCyw6njfMVGBCx3T2Uo6J3CvcuIxBZnlFQ90IDg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7026/api/events/78",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"events",
+								"78"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosDeleteDogadjaj2",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7026/api/events/12",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"events",
+								"12"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Izvodjac",
+			"item": [
+				{
+					"name": "GetIzvodjac",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7026/api/preformers",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"preformers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetIzvodjacByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7026/api/preformers/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"preformers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7026/api/preformers/145",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"preformers",
+								"145"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostIzvodjac",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InphcG9zbGVuaSIsIm5iZiI6MTY4MTIxOTExNSwiZXhwIjoxNjgxNDc4MzE1LCJpc3MiOiJCaWxldGFybmljYUJhY2sifQ.ZsEuMCyw6njfMVGBCx3T2Uo6J3CvcuIxBZnlFQ90IDg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nazivIzvodjaca\": \"Jovana Tnackovic\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/preformers",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"preformers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosPostIzvodjac",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Imt1cGFjIiwibmJmIjoxNjgxMjIwMTQ5LCJleHAiOjE2ODE0NzkzNDksImlzcyI6IkJpbGV0YXJuaWNhQmFjayJ9.sc2OqyqUWe73Svarg6hikJHStwNTXS2IWEhEhuq4PLs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nazivIzvodjaca\": \"Jovana Tnackovic\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/preformers",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"preformers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosPostIzvodjac2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nazivIzvodjaca\": \"Jovana Tnackovic\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/preformers",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"preformers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PutIzvodjac",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InphcG9zbGVuaSIsIm5iZiI6MTY4MTIxOTExNSwiZXhwIjoxNjgxNDc4MzE1LCJpc3MiOiJCaWxldGFybmljYUJhY2sifQ.ZsEuMCyw6njfMVGBCx3T2Uo6J3CvcuIxBZnlFQ90IDg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"izvodjacID\": 6,\r\n  \"nazivIzvodjaca\": \"Jovana Tanackovic\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/preformers",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"preformers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosPutIzvodjac3",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InphcG9zbGVuaSIsIm5iZiI6MTY4MTIxOTExNSwiZXhwIjoxNjgxNDc4MzE1LCJpc3MiOiJCaWxldGFybmljYUJhY2sifQ.ZsEuMCyw6njfMVGBCx3T2Uo6J3CvcuIxBZnlFQ90IDg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"izvodjacID\": 56,\r\n  \"nazivIzvodjaca\": \"Jovana Tanackovic\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/preformers",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"preformers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosPutIzvodjac2",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Imt1cGFjIiwibmJmIjoxNjgxMjIwMTQ5LCJleHAiOjE2ODE0NzkzNDksImlzcyI6IkJpbGV0YXJuaWNhQmFjayJ9.sc2OqyqUWe73Svarg6hikJHStwNTXS2IWEhEhuq4PLs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"izvodjacID\": 6,\r\n  \"nazivIzvodjaca\": \"Jovana Tanackovic\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/preformers",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"preformers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosPutIzvodjac",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"izvodjacID\": 6,\r\n  \"nazivIzvodjaca\": \"Jovana Tanackovic\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/preformers",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"preformers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteIzvodjac",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InphcG9zbGVuaSIsIm5iZiI6MTY4MTIxOTExNSwiZXhwIjoxNjgxNDc4MzE1LCJpc3MiOiJCaWxldGFybmljYUJhY2sifQ.ZsEuMCyw6njfMVGBCx3T2Uo6J3CvcuIxBZnlFQ90IDg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7026/api/preformers/6",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"preformers",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosDeleteIzvodjac2",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Imt1cGFjIiwibmJmIjoxNjgxMjIwMTQ5LCJleHAiOjE2ODE0NzkzNDksImlzcyI6IkJpbGV0YXJuaWNhQmFjayJ9.sc2OqyqUWe73Svarg6hikJHStwNTXS2IWEhEhuq4PLs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7026/api/preformers/6",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"preformers",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosDeleteIzvodjac3",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7026/api/preformers/6",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"preformers",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosDeleteIzvodjac",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InphcG9zbGVuaSIsIm5iZiI6MTY4MTIxOTExNSwiZXhwIjoxNjgxNDc4MzE1LCJpc3MiOiJCaWxldGFybmljYUJhY2sifQ.ZsEuMCyw6njfMVGBCx3T2Uo6J3CvcuIxBZnlFQ90IDg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7026/api/preformers/68",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"preformers",
+								"68"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Karta",
+			"item": [
+				{
+					"name": "GetKarta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7026/api/tickets",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"tickets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetKartaByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7026/api/tickets/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"tickets",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosGetKartaByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7026/api/tickets/123",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"tickets",
+								"123"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostKarta",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InphcG9zbGVuaSIsIm5iZiI6MTY4MTIxOTExNSwiZXhwIjoxNjgxNDc4MzE1LCJpc3MiOiJCaWxldGFybmljYUJhY2sifQ.ZsEuMCyw6njfMVGBCx3T2Uo6J3CvcuIxBZnlFQ90IDg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"datumOdrzavanja\": \"2024-04-11T14:37:34.756Z\",\r\n  \"naStanju\": 123,\r\n  \"cenaKarte\": 540,\r\n  \"izvodjacID\": 2,\r\n  \"kategorijaID\": 2,\r\n  \"dogadjajID\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/tickets",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"tickets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosPostKarta",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Imt1cGFjIiwibmJmIjoxNjgxMjIwMTQ5LCJleHAiOjE2ODE0NzkzNDksImlzcyI6IkJpbGV0YXJuaWNhQmFjayJ9.sc2OqyqUWe73Svarg6hikJHStwNTXS2IWEhEhuq4PLs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"datumOdrzavanja\": \"2024-04-11T14:37:34.756Z\",\r\n  \"naStanju\": 123,\r\n  \"cenaKarte\": 540,\r\n  \"izvodjacID\": 2,\r\n  \"kategorijaID\": 2,\r\n  \"dogadjajID\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/tickets",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"tickets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosPostKarta2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"datumOdrzavanja\": \"2024-04-11T14:37:34.756Z\",\r\n  \"naStanju\": 123,\r\n  \"cenaKarte\": 540,\r\n  \"izvodjacID\": 2,\r\n  \"kategorijaID\": 2,\r\n  \"dogadjajID\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/tickets",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"tickets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PutKarta",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InphcG9zbGVuaSIsIm5iZiI6MTY4MTIxOTExNSwiZXhwIjoxNjgxNDc4MzE1LCJpc3MiOiJCaWxldGFybmljYUJhY2sifQ.ZsEuMCyw6njfMVGBCx3T2Uo6J3CvcuIxBZnlFQ90IDg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"kartaID\": 1,\r\n  \"cenaKarte\": 1500,\r\n  \"datumOdrzavanja\": \"2024-04-11T14:41:09.867Z\",\r\n  \"dogadjajID\": 1,\r\n  \"izvodjacID\": 2,\r\n  \"kategorijaID\": 3,\r\n  \"naStanju\": 400,\r\n  \"izvodjacDto\": {\r\n    \"izvodjacID\": 0,\r\n    \"nazivIzvodjaca\": \"string\"\r\n  },\r\n  \"kategorijaDto\": {\r\n    \"kategorijaID\": 0,\r\n    \"nazivKategorije\": \"string\"\r\n  },\r\n  \"dogadjajDto\": {\r\n    \"dogadjajID\": 0,\r\n    \"nazivDogadjaja\": \"string\"\r\n  }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/tickets",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"tickets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosPutKarta",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InphcG9zbGVuaSIsIm5iZiI6MTY4MTIxOTExNSwiZXhwIjoxNjgxNDc4MzE1LCJpc3MiOiJCaWxldGFybmljYUJhY2sifQ.ZsEuMCyw6njfMVGBCx3T2Uo6J3CvcuIxBZnlFQ90IDg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"kartaID\": 12,\r\n  \"cenaKarte\": 1500,\r\n  \"datumOdrzavanja\": \"2024-04-11T14:41:09.867Z\",\r\n  \"dogadjajID\": 1,\r\n  \"izvodjacID\": 2,\r\n  \"kategorijaID\": 3,\r\n  \"naStanju\": 400,\r\n  \"izvodjacDto\": {\r\n    \"izvodjacID\": 0,\r\n    \"nazivIzvodjaca\": \"string\"\r\n  },\r\n  \"kategorijaDto\": {\r\n    \"kategorijaID\": 0,\r\n    \"nazivKategorije\": \"string\"\r\n  },\r\n  \"dogadjajDto\": {\r\n    \"dogadjajID\": 0,\r\n    \"nazivDogadjaja\": \"string\"\r\n  }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/tickets",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"tickets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosPutKarta2",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Imt1cGFjIiwibmJmIjoxNjgxMjIwMTQ5LCJleHAiOjE2ODE0NzkzNDksImlzcyI6IkJpbGV0YXJuaWNhQmFjayJ9.sc2OqyqUWe73Svarg6hikJHStwNTXS2IWEhEhuq4PLs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"kartaID\": 1,\r\n  \"cenaKarte\": 1500,\r\n  \"datumOdrzavanja\": \"2024-04-11T14:41:09.867Z\",\r\n  \"dogadjajID\": 1,\r\n  \"izvodjacID\": 2,\r\n  \"kategorijaID\": 3,\r\n  \"naStanju\": 400,\r\n  \"izvodjacDto\": {\r\n    \"izvodjacID\": 0,\r\n    \"nazivIzvodjaca\": \"string\"\r\n  },\r\n  \"kategorijaDto\": {\r\n    \"kategorijaID\": 0,\r\n    \"nazivKategorije\": \"string\"\r\n  },\r\n  \"dogadjajDto\": {\r\n    \"dogadjajID\": 0,\r\n    \"nazivDogadjaja\": \"string\"\r\n  }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/tickets",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"tickets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosPutKarta3",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"kartaID\": 1,\r\n  \"cenaKarte\": 1500,\r\n  \"datumOdrzavanja\": \"2024-04-11T14:41:09.867Z\",\r\n  \"dogadjajID\": 1,\r\n  \"izvodjacID\": 2,\r\n  \"kategorijaID\": 3,\r\n  \"naStanju\": 400,\r\n  \"izvodjacDto\": {\r\n    \"izvodjacID\": 0,\r\n    \"nazivIzvodjaca\": \"string\"\r\n  },\r\n  \"kategorijaDto\": {\r\n    \"kategorijaID\": 0,\r\n    \"nazivKategorije\": \"string\"\r\n  },\r\n  \"dogadjajDto\": {\r\n    \"dogadjajID\": 0,\r\n    \"nazivDogadjaja\": \"string\"\r\n  }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/tickets",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"tickets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteKarta",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InphcG9zbGVuaSIsIm5iZiI6MTY4MTIxOTExNSwiZXhwIjoxNjgxNDc4MzE1LCJpc3MiOiJCaWxldGFybmljYUJhY2sifQ.ZsEuMCyw6njfMVGBCx3T2Uo6J3CvcuIxBZnlFQ90IDg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7026/api/tickets/7",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"tickets",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosDeleteKarta",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InphcG9zbGVuaSIsIm5iZiI6MTY4MTIxOTExNSwiZXhwIjoxNjgxNDc4MzE1LCJpc3MiOiJCaWxldGFybmljYUJhY2sifQ.ZsEuMCyw6njfMVGBCx3T2Uo6J3CvcuIxBZnlFQ90IDg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7026/api/tickets/74",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"tickets",
+								"74"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosDeleteKarta2",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Imt1cGFjIiwibmJmIjoxNjgxMjIwMTQ5LCJleHAiOjE2ODE0NzkzNDksImlzcyI6IkJpbGV0YXJuaWNhQmFjayJ9.sc2OqyqUWe73Svarg6hikJHStwNTXS2IWEhEhuq4PLs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7026/api/tickets/4",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"tickets",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosDeleteKarta3",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7026/api/tickets/4",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"tickets",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Kategorija",
+			"item": [
+				{
+					"name": "GetKategorija",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7026/api/categories",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetKategorijaByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7026/api/categories/4",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"categories",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosGetByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7026/api/categories/44",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"categories",
+								"44"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostKategorija",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InphcG9zbGVuaSIsIm5iZiI6MTY4MTIxOTExNSwiZXhwIjoxNjgxNDc4MzE1LCJpc3MiOiJCaWxldGFybmljYUJhY2sifQ.ZsEuMCyw6njfMVGBCx3T2Uo6J3CvcuIxBZnlFQ90IDg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nazivKategorije\": \"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/categories",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosPostKategorija",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Imt1cGFjIiwibmJmIjoxNjgxMjIwMTQ5LCJleHAiOjE2ODE0NzkzNDksImlzcyI6IkJpbGV0YXJuaWNhQmFjayJ9.sc2OqyqUWe73Svarg6hikJHStwNTXS2IWEhEhuq4PLs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nazivKategorije\": \"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/categories",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosPostKategorija2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nazivKategorije\": \"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/categories",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PutKategorija",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InphcG9zbGVuaSIsIm5iZiI6MTY4MTIxOTExNSwiZXhwIjoxNjgxNDc4MzE1LCJpc3MiOiJCaWxldGFybmljYUJhY2sifQ.ZsEuMCyw6njfMVGBCx3T2Uo6J3CvcuIxBZnlFQ90IDg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"kategorijaID\": 6,\r\n    \"nazivKategorije\": \"test123\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/categories",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosPutKategorija2",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Imt1cGFjIiwibmJmIjoxNjgxMjIwMTQ5LCJleHAiOjE2ODE0NzkzNDksImlzcyI6IkJpbGV0YXJuaWNhQmFjayJ9.sc2OqyqUWe73Svarg6hikJHStwNTXS2IWEhEhuq4PLs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"kategorijaID\": 6,\r\n    \"nazivKategorije\": \"test123\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/categories",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosPutKategorija3",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"kategorijaID\": 6,\r\n    \"nazivKategorije\": \"test123\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/categories",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosPutKategorija",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InphcG9zbGVuaSIsIm5iZiI6MTY4MTIxOTExNSwiZXhwIjoxNjgxNDc4MzE1LCJpc3MiOiJCaWxldGFybmljYUJhY2sifQ.ZsEuMCyw6njfMVGBCx3T2Uo6J3CvcuIxBZnlFQ90IDg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"kategorijaID\": 44,\r\n    \"nazivKategorije\": \"test123\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/categories",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteKategorija",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InphcG9zbGVuaSIsIm5iZiI6MTY4MTIxOTExNSwiZXhwIjoxNjgxNDc4MzE1LCJpc3MiOiJCaWxldGFybmljYUJhY2sifQ.ZsEuMCyw6njfMVGBCx3T2Uo6J3CvcuIxBZnlFQ90IDg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7026/api/categories/6",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"categories",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosDeleteKategorija",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InphcG9zbGVuaSIsIm5iZiI6MTY4MTIxOTExNSwiZXhwIjoxNjgxNDc4MzE1LCJpc3MiOiJCaWxldGFybmljYUJhY2sifQ.ZsEuMCyw6njfMVGBCx3T2Uo6J3CvcuIxBZnlFQ90IDg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7026/api/categories/65",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"categories",
+								"65"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosDeleteKategorija2",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Imt1cGFjIiwibmJmIjoxNjgxMjIwMTQ5LCJleHAiOjE2ODE0NzkzNDksImlzcyI6IkJpbGV0YXJuaWNhQmFjayJ9.sc2OqyqUWe73Svarg6hikJHStwNTXS2IWEhEhuq4PLs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7026/api/categories/5",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"categories",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosDeleteKategorija3",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7026/api/categories/5",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"categories",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Placanje",
+			"item": [
+				{
+					"name": "GetPlacanje",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InphcG9zbGVuaSIsIm5iZiI6MTY4MTIyODUwNiwiZXhwIjoxNjgxNDg3NzA2LCJpc3MiOiJCaWxldGFybmljYUJhY2sifQ.1k92Wv3-Gtaa0euUCcmTKwMdJ9fw5yqbOUEuMNM3yrE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7026/api/payments",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"payments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPlacanjeByID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InphcG9zbGVuaSIsIm5iZiI6MTY4MTIyODUwNiwiZXhwIjoxNjgxNDg3NzA2LCJpc3MiOiJCaWxldGFybmljYUJhY2sifQ.1k92Wv3-Gtaa0euUCcmTKwMdJ9fw5yqbOUEuMNM3yrE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7026/api/payments/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"payments",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosGetPlacanjeByID3",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InphcG9zbGVuaSIsIm5iZiI6MTY4MTIyODUwNiwiZXhwIjoxNjgxNDg3NzA2LCJpc3MiOiJCaWxldGFybmljYUJhY2sifQ.1k92Wv3-Gtaa0euUCcmTKwMdJ9fw5yqbOUEuMNM3yrE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7026/api/payments/17",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"payments",
+								"17"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosGetPlacanje",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Imt1cGFjIiwibmJmIjoxNjgxMjI4NDgyLCJleHAiOjE2ODE0ODc2ODIsImlzcyI6IkJpbGV0YXJuaWNhQmFjayJ9.wM0gpEmUm31EVaFyTqtWkKbdwb30kU4dMJVyQ-jImOc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7026/api/payments",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"payments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosGetPlacanjeByID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Imt1cGFjIiwibmJmIjoxNjgxMjI4NDgyLCJleHAiOjE2ODE0ODc2ODIsImlzcyI6IkJpbGV0YXJuaWNhQmFjayJ9.wM0gpEmUm31EVaFyTqtWkKbdwb30kU4dMJVyQ-jImOc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7026/api/payments/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"payments",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosGetPlacanje2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7026/api/payments",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"payments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosGetPlacanjeByID2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7026/api/payments",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"payments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostPlacanje",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Imt1cGFjIiwibmJmIjoxNjgxMjI4NDgyLCJleHAiOjE2ODE0ODc2ODIsImlzcyI6IkJpbGV0YXJuaWNhQmFjayJ9.wM0gpEmUm31EVaFyTqtWkKbdwb30kU4dMJVyQ-jImOc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"datumPlacanja\": \"2023-04-11T18:54:29.774Z\",\r\n  \"info\": \"Dina\",\r\n  \"porudzbinaID\": 6\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/payments",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"payments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosPostPlacanje",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InphcG9zbGVuaSIsIm5iZiI6MTY4MTIyODUwNiwiZXhwIjoxNjgxNDg3NzA2LCJpc3MiOiJCaWxldGFybmljYUJhY2sifQ.1k92Wv3-Gtaa0euUCcmTKwMdJ9fw5yqbOUEuMNM3yrE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"datumPlacanja\": \"2023-04-11T18:54:29.774Z\",\r\n  \"info\": \"Dina\",\r\n  \"porudzbinaID\": 6\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/payments",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"payments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosPostPlacanje2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"datumPlacanja\": \"2023-04-11T18:54:29.774Z\",\r\n  \"info\": \"Dina\",\r\n  \"porudzbinaID\": 6\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/payments",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"payments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PutPlacanje",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InphcG9zbGVuaSIsIm5iZiI6MTY4MTIyODUwNiwiZXhwIjoxNjgxNDg3NzA2LCJpc3MiOiJCaWxldGFybmljYUJhY2sifQ.1k92Wv3-Gtaa0euUCcmTKwMdJ9fw5yqbOUEuMNM3yrE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"placanjeID\": 1,\r\n  \"datumPlacanja\": \"2023-04-11T18:58:37.241Z\",\r\n  \"info\": \"Dina\",\r\n  \"porudzbinaID\": 6,\r\n  \"porudzbinaEntity\": {\r\n    \"porudzbinaID\": 0,\r\n    \"datum\": \"2023-04-11T18:58:37.241Z\",\r\n    \"ukupnaCena\": 0,\r\n    \"korisnikID\": 0,\r\n    \"korisnikEntity\": {\r\n      \"korisnikID\": 0,\r\n      \"korisnickoIme\": \"string\",\r\n      \"lozinka\": \"string\",\r\n      \"ime\": \"string\",\r\n      \"prezime\": \"string\",\r\n      \"email\": \"string\",\r\n      \"uloga\": \"string\"\r\n    }\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/payments",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"payments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosPutPlacanje2",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Imt1cGFjIiwibmJmIjoxNjgxMjI4NDgyLCJleHAiOjE2ODE0ODc2ODIsImlzcyI6IkJpbGV0YXJuaWNhQmFjayJ9.wM0gpEmUm31EVaFyTqtWkKbdwb30kU4dMJVyQ-jImOc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"placanjeID\": 1,\r\n  \"datumPlacanja\": \"2023-04-11T18:58:37.241Z\",\r\n  \"info\": \"Dina\",\r\n  \"porudzbinaID\": 6,\r\n  \"porudzbinaEntity\": {\r\n    \"porudzbinaID\": 0,\r\n    \"datum\": \"2023-04-11T18:58:37.241Z\",\r\n    \"ukupnaCena\": 0,\r\n    \"korisnikID\": 0,\r\n    \"korisnikEntity\": {\r\n      \"korisnikID\": 0,\r\n      \"korisnickoIme\": \"string\",\r\n      \"lozinka\": \"string\",\r\n      \"ime\": \"string\",\r\n      \"prezime\": \"string\",\r\n      \"email\": \"string\",\r\n      \"uloga\": \"string\"\r\n    }\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/payments",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"payments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosPutPlacanje3",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"placanjeID\": 1,\r\n  \"datumPlacanja\": \"2023-04-11T18:58:37.241Z\",\r\n  \"info\": \"Dina\",\r\n  \"porudzbinaID\": 6,\r\n  \"porudzbinaEntity\": {\r\n    \"porudzbinaID\": 0,\r\n    \"datum\": \"2023-04-11T18:58:37.241Z\",\r\n    \"ukupnaCena\": 0,\r\n    \"korisnikID\": 0,\r\n    \"korisnikEntity\": {\r\n      \"korisnikID\": 0,\r\n      \"korisnickoIme\": \"string\",\r\n      \"lozinka\": \"string\",\r\n      \"ime\": \"string\",\r\n      \"prezime\": \"string\",\r\n      \"email\": \"string\",\r\n      \"uloga\": \"string\"\r\n    }\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/payments",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"payments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosPutPlacanje",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InphcG9zbGVuaSIsIm5iZiI6MTY4MTIyODUwNiwiZXhwIjoxNjgxNDg3NzA2LCJpc3MiOiJCaWxldGFybmljYUJhY2sifQ.1k92Wv3-Gtaa0euUCcmTKwMdJ9fw5yqbOUEuMNM3yrE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"placanjeID\": 17,\r\n  \"datumPlacanja\": \"2023-04-11T18:58:37.241Z\",\r\n  \"info\": \"Dina\",\r\n  \"porudzbinaID\": 6,\r\n  \"porudzbinaEntity\": {\r\n    \"porudzbinaID\": 0,\r\n    \"datum\": \"2023-04-11T18:58:37.241Z\",\r\n    \"ukupnaCena\": 0,\r\n    \"korisnikID\": 0,\r\n    \"korisnikEntity\": {\r\n      \"korisnikID\": 0,\r\n      \"korisnickoIme\": \"string\",\r\n      \"lozinka\": \"string\",\r\n      \"ime\": \"string\",\r\n      \"prezime\": \"string\",\r\n      \"email\": \"string\",\r\n      \"uloga\": \"string\"\r\n    }\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/payments",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"payments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletePlacanje",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InphcG9zbGVuaSIsIm5iZiI6MTY4MTIyODUwNiwiZXhwIjoxNjgxNDg3NzA2LCJpc3MiOiJCaWxldGFybmljYUJhY2sifQ.1k92Wv3-Gtaa0euUCcmTKwMdJ9fw5yqbOUEuMNM3yrE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7026/api/payments/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"payments",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosDeletePlacanje",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InphcG9zbGVuaSIsIm5iZiI6MTY4MTIyODUwNiwiZXhwIjoxNjgxNDg3NzA2LCJpc3MiOiJCaWxldGFybmljYUJhY2sifQ.1k92Wv3-Gtaa0euUCcmTKwMdJ9fw5yqbOUEuMNM3yrE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7026/api/payments/24",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"payments",
+								"24"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosDeletePlacanje2",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Imt1cGFjIiwibmJmIjoxNjgxMjI4NDgyLCJleHAiOjE2ODE0ODc2ODIsImlzcyI6IkJpbGV0YXJuaWNhQmFjayJ9.wM0gpEmUm31EVaFyTqtWkKbdwb30kU4dMJVyQ-jImOc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7026/api/payments/4",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"payments",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosDeletePlacanje3",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7026/api/payments/4",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"payments",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Korisnik",
+			"item": [
+				{
+					"name": "GetKorisnik",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InphcG9zbGVuaSIsIm5iZiI6MTY4MTIyODUwNiwiZXhwIjoxNjgxNDg3NzA2LCJpc3MiOiJCaWxldGFybmljYUJhY2sifQ.1k92Wv3-Gtaa0euUCcmTKwMdJ9fw5yqbOUEuMNM3yrE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7026/api/users",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetKorisnikByID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InphcG9zbGVuaSIsIm5iZiI6MTY4MTIyODUwNiwiZXhwIjoxNjgxNDg3NzA2LCJpc3MiOiJCaWxldGFybmljYUJhY2sifQ.1k92Wv3-Gtaa0euUCcmTKwMdJ9fw5yqbOUEuMNM3yrE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7026/api/users/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosGetKorisnikByID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InphcG9zbGVuaSIsIm5iZiI6MTY4MTIyODUwNiwiZXhwIjoxNjgxNDg3NzA2LCJpc3MiOiJCaWxldGFybmljYUJhY2sifQ.1k92Wv3-Gtaa0euUCcmTKwMdJ9fw5yqbOUEuMNM3yrE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7026/api/users/24",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"users",
+								"24"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosGetKorisnikByID2",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Imt1cGFjIiwibmJmIjoxNjgxMjI4NDgyLCJleHAiOjE2ODE0ODc2ODIsImlzcyI6IkJpbGV0YXJuaWNhQmFjayJ9.wM0gpEmUm31EVaFyTqtWkKbdwb30kU4dMJVyQ-jImOc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7026/api/users/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosGetKorisnikByID3",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7026/api/users/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosGetKorisnik",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Imt1cGFjIiwibmJmIjoxNjgxMjI4NDgyLCJleHAiOjE2ODE0ODc2ODIsImlzcyI6IkJpbGV0YXJuaWNhQmFjayJ9.wM0gpEmUm31EVaFyTqtWkKbdwb30kU4dMJVyQ-jImOc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7026/api/users",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosGetKorisnik2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7026/api/users",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PutKorisnik",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Imt1cGFjIiwibmJmIjoxNjgxMjI4NDgyLCJleHAiOjE2ODE0ODc2ODIsImlzcyI6IkJpbGV0YXJuaWNhQmFjayJ9.wM0gpEmUm31EVaFyTqtWkKbdwb30kU4dMJVyQ-jImOc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"korisnikID\": 2,\r\n  \"korisnickoIme\": \"lazic.m\",\r\n  \"lozinka\": \"lazalaza\",\r\n  \"ime\": \"Laza\",\r\n  \"prezime\": \"Lazza\",\r\n  \"email\": \"lazicm@gmail.com\",\r\n  \"uloga\": \"zaposleni\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/users",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosPutKorisnik2",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InphcG9zbGVuaSIsIm5iZiI6MTY4MTIyODUwNiwiZXhwIjoxNjgxNDg3NzA2LCJpc3MiOiJCaWxldGFybmljYUJhY2sifQ.1k92Wv3-Gtaa0euUCcmTKwMdJ9fw5yqbOUEuMNM3yrE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"korisnikID\": 2,\r\n  \"korisnickoIme\": \"lazic.m\",\r\n  \"lozinka\": \"lazalaza\",\r\n  \"ime\": \"Laza\",\r\n  \"prezime\": \"Lazza\",\r\n  \"email\": \"lazicm@gmail.com\",\r\n  \"uloga\": \"zaposleni\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/users",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosPutKorisnik3",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"korisnikID\": 2,\r\n  \"korisnickoIme\": \"lazic.m\",\r\n  \"lozinka\": \"lazalaza\",\r\n  \"ime\": \"Laza\",\r\n  \"prezime\": \"Lazza\",\r\n  \"email\": \"lazicm@gmail.com\",\r\n  \"uloga\": \"zaposleni\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/users",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosPutKorisnik",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Imt1cGFjIiwibmJmIjoxNjgxMjI4NDgyLCJleHAiOjE2ODE0ODc2ODIsImlzcyI6IkJpbGV0YXJuaWNhQmFjayJ9.wM0gpEmUm31EVaFyTqtWkKbdwb30kU4dMJVyQ-jImOc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"korisnikID\": 3,\r\n  \"korisnickoIme\": \"lazic.m\",\r\n  \"lozinka\": \"lazalaza\",\r\n  \"ime\": \"Laza\",\r\n  \"prezime\": \"Lazza\",\r\n  \"email\": \"lazicm@gmail.com\",\r\n  \"uloga\": \"zaposleni\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7026/api/users",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteKupca",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiNSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Imt1cGFjIiwibmJmIjoxNjgxMjM3OTkxLCJleHAiOjE2ODE0OTcxOTEsImlzcyI6IkJpbGV0YXJuaWNhQmFjayJ9.dDrg1em3fOHuTNzYGWksfcz3OcL_d76yGgBBQMKOYOY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7026/api/users/5",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"users",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosDeleteKupca",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiNSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Imt1cGFjIiwibmJmIjoxNjgxMjM3OTkxLCJleHAiOjE2ODE0OTcxOTEsImlzcyI6IkJpbGV0YXJuaWNhQmFjayJ9.dDrg1em3fOHuTNzYGWksfcz3OcL_d76yGgBBQMKOYOY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7026/api/users/45",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"users",
+								"45"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosDeleteKupca2",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrb3Jpc25pa0lEIjoiMSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InphcG9zbGVuaSIsIm5iZiI6MTY4MTIyODUwNiwiZXhwIjoxNjgxNDg3NzA2LCJpc3MiOiJCaWxldGFybmljYUJhY2sifQ.1k92Wv3-Gtaa0euUCcmTKwMdJ9fw5yqbOUEuMNM3yrE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7026/api/users/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LosDeleteKupca3",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7026/api/users/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7026",
+							"path": [
+								"api",
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

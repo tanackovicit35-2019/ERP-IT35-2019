@@ -57,6 +57,18 @@ namespace BiletarnicaBack.Controllers
             return Ok(mapper.Map<DogadjajDto>(dogadjaj));
         }
 
+        [AllowAnonymous]
+        [HttpGet("/events/name")]
+        public ActionResult<DogadjajDto> GetEventByName(string nazivDogadjaja)
+        {
+            DogadjajEntity izv = dogadjajRepo.GetEventByName(nazivDogadjaja);
+            if (izv == null)
+            {
+                return StatusCode(StatusCodes.Status404NotFound);
+            }
+            return Ok(mapper.Map<DogadjajDto>(izv));
+        }
+
         [Authorize(Policy = "Zaposleni")]
         [HttpPost]
         [Consumes("application/json")]

@@ -25,8 +25,11 @@ namespace BiletarnicaBack.Repo
         {
             return context.dogadjaj.FirstOrDefault(r => r.dogadjajID == dogadjajID);
         }
-         
-        
+
+        public DogadjajEntity GetEventByName(string nazivDogadjaja)
+        {
+            return context.dogadjaj.FirstOrDefault(a => a.nazivDogadjaja == nazivDogadjaja);
+        }
 
         public DogadjajEntity CreateDogadjaj(DogadjajEntity dogadjajEntity)
         {

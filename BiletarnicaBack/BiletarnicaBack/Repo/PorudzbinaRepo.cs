@@ -28,8 +28,6 @@ namespace BiletarnicaBack.Repo
             return context.porudzbina.FirstOrDefault(r => r.porudzbinaID == porudzbinaID);
         }
 
-
-
         public PorudzbinaEntity CreatePorudzbina(PorudzbinaEntity porudzbinaEntity)
         {
             var created = context.Add(porudzbinaEntity);

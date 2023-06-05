@@ -78,18 +78,33 @@ namespace BiletarnicaBack.Controllers
                 return Forbid();
 
             }
-           
+
             var stavka = stavkaRepo.GetStavkaByID(stavkaID);
             var porudzbina = porudzbinaRepo.GetPorudzbinaByID(stavka.porudzbinaID);
             if (stavka == null)
             {
                 return NotFound();
             }
-            if(porudzbina.korisnikID == userIDs) 
+            if (porudzbina.korisnikID == userIDs)
             {
                 return Ok(mapper.Map<StavkaPorudzbineDto>(stavka));
             }
             return Forbid();
+        }
+
+
+        [AllowAnonymous]
+        [HttpGet("orders/{porudzbinaID}")]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public ActionResult<List<StavkaPorudzbineDto>> GetStavkaByPorudzbina(int porudzbinaID)
+        {
+            List<StavkaPorudzbineEntity> orderItems = stavkaRepo.GetStavkaByPorudzbina(porudzbinaID);
+            if (orderItems == null || orderItems.Count== 0)
+            {
+                return NotFound();
+            }
+            return Ok(mapper.Map<List<StavkaPorudzbineDto>>(orderItems));
         }
 
         [Authorize(Policy = "Log")]

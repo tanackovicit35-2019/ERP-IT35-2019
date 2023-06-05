@@ -10,6 +10,8 @@ namespace BiletarnicaBack.Profiles
             CreateMap<KartaEntity, KartaDto>();
             CreateMap<KartaDto, KartaEntity>();
             CreateMap<KartaEntity, KartaEntity>();
+            CreateMap<KartaEntity,KartaUpdateDto>();
+            CreateMap<KartaUpdateDto,KartaEntity>();
             CreateMap<KartaDto, KartaDto>();
             CreateMap<KartaEntity, DogadjajDto>();
             CreateMap<DogadjajDto, KartaEntity>();

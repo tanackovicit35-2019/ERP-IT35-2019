@@ -15,10 +15,5 @@ namespace BiletarnicaBack.Entities
         [NotMapped]
         public KorisnikEntity korisnikEntity { get; set; }
 
-        public override string ToString()
-        {
-            return "Porudzbina: { PorudzbinaID: " + this.porudzbinaID + ", Datum: " + this.datum + ", Ukupna Cena: "
-                + this.ukupnaCena + ", KorisnikID: " + this.korisnikID + " }";
-        }
     }
 }

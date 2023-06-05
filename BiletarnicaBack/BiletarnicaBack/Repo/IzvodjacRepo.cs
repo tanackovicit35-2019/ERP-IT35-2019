@@ -19,6 +19,10 @@ namespace BiletarnicaBack.Repo
             var created = context.Add(izvodjacEntity);
             return mapper.Map<IzvodjacEntity>(created.Entity);
         }
+        public IzvodjacEntity GetPerformerByName(string nazivIzvodjaca)
+        {
+            return context.izvodjac.FirstOrDefault(a => a.nazivIzvodjaca == nazivIzvodjaca);
+        }
 
         public void DeleteIzvodjac(int izvodjacID)
         {

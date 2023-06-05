@@ -17,12 +17,18 @@ namespace BiletarnicaBack.Controllers
         private readonly IMapper mapper;
         private readonly Context context;
         private readonly IKartaRepo kartaRepo;
+        private readonly IKategorijaRepo kategorijaRepo;
+        private readonly IIzvodjacRepo izvodjacRepo;
+        private readonly IDogadjajRepo dogadjajRepo;
 
-        public KartaController(IMapper mapper, Context context, IKartaRepo kartaRepo)
+        public KartaController(IMapper mapper, Context context, IKartaRepo kartaRepo, IKategorijaRepo kategorijaRepo, IIzvodjacRepo izvodjacRepo, IDogadjajRepo dogadjajRepo)
         {
             this.mapper = mapper;
             this.context = context;
             this.kartaRepo = kartaRepo;
+            this.kategorijaRepo = kategorijaRepo;
+            this.izvodjacRepo = izvodjacRepo;
+            this.dogadjajRepo = dogadjajRepo;
         }
         [AllowAnonymous]
         [HttpGet]
@@ -55,6 +61,25 @@ namespace BiletarnicaBack.Controllers
         {
 
             var karta = kartaRepo.GetKartaByID(kartaID);
+            var izv = izvodjacRepo.GetIzvodjacByID(karta.izvodjacID);
+            var dog = dogadjajRepo.GetDogadjajByID(karta.dogadjajID);
+            var kat = kategorijaRepo.GetKategorijaByID(karta.kategorijaID);
+
+            karta.kategorijaDto = new KategorijaDto
+            {
+                kategorijaID=kat.kategorijaID,
+                nazivKategorije=kat.nazivKategorije
+            };
+            karta.izvodjacDto = new IzvodjacDto
+            {
+                izvodjacID = izv.izvodjacID,
+                nazivIzvodjaca = izv.nazivIzvodjaca
+            };
+            karta.dogadjajDto = new DogadjajDto
+            {
+                dogadjajID = dog.dogadjajID,
+                nazivDogadjaja = dog.nazivDogadjaja
+            };
             if (karta == null)
             {
                 return NotFound();

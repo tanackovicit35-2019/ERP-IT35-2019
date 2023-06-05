@@ -9,7 +9,8 @@ namespace BiletarnicaBack.Entities
     {
         [Key]
         public int kartaID { get; set; }
-
+        [Required(ErrorMessage = "Mandatory")]
+        public string nazivKarte { get; set; }
         [Required(ErrorMessage = "Mandatory")]
         public int cenaKarte { get; set; }
         [Required(ErrorMessage = "Mandatory")]
@@ -28,12 +29,10 @@ namespace BiletarnicaBack.Entities
         public KategorijaDto kategorijaDto{ get; set;}
         [NotMapped]
         public DogadjajDto dogadjajDto { get;set; }
+        [Required(ErrorMessage = "Mandatory")]
+        public string slika { get; set; }
+        
 
-        public override string ToString()
-        {
-            return "Karta: { KartaID: " + this.kartaID + ", Datum Odrzavanja: " + this.datumOdrzavanja +
-                ", Na Stanju: " + this.naStanju + ", Cena Karte: " + this.cenaKarte + ", IzvodjacID: " +
-                this.izvodjacID + ", KategorijaID: " + this.kategorijaID + ", DogadjajID: " + this.dogadjajID + " }";
-        }
+
     }
 }

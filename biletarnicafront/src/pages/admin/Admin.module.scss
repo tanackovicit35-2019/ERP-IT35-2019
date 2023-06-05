@@ -1,0 +1,19 @@
+.admincontainer{
+    display: flex;
+    
+  }
+  .sectionadmin {
+    flex-grow: 1;
+    margin-left: 20%; 
+  }
+  .table{
+    margin-left: 20px;
+    border-collapse: collapse;
+
+  }
+  .th,td{
+    border: 2px solid purple;
+    border-collapse: collapse;
+    padding: 2px;
+    text-align: center;
+  }

@@ -7,6 +7,7 @@ namespace BiletarnicaBack.Repo
         List<StavkaPorudzbineEntity> GetStavka();
         List<StavkaPorudzbineEntity> GetStavkaKupac(int id);
         StavkaPorudzbineEntity GetStavkaByID(int stavkaID);
+        List<StavkaPorudzbineEntity> GetStavkaByPorudzbina(int porudzbinaID);
         StavkaPorudzbineEntity CreateStavka(StavkaPorudzbineEntity stavkaEntity);
         void UpdateStavka(StavkaPorudzbineEntity stavkaEntity);
         void DeleteStavka(int stavkaID);

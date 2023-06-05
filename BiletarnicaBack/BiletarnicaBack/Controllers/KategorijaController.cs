@@ -57,6 +57,30 @@ namespace BiletarnicaBack.Controllers
             return Ok(mapper.Map<KategorijaDto>(kategorija));
         }
 
+        [AllowAnonymous]
+        [HttpGet("/tickets/{nazivKategorije}")]
+        public ActionResult<List<KartaEntity>> GetKategorijaByName(string nazivKategorije)
+        {
+            List<KartaEntity> karteKat = kategorijaRepo.GetKategorijaByName(nazivKategorije);
+            if (karteKat == null || karteKat.Count == 0)
+            {
+                return StatusCode(StatusCodes.Status404NotFound);
+            }
+            return Ok(mapper.Map<List<KartaDto>>(karteKat));
+        }
+
+        [AllowAnonymous]
+        [HttpGet("/category/name")]
+        public ActionResult<KategorijaDto> GetKategorijaZaKartu(string nazivKategorije)
+        {
+            KategorijaEntity izv = kategorijaRepo.GetKategorijaZaKartu(nazivKategorije);
+            if (izv == null)
+            {
+                return StatusCode(StatusCodes.Status404NotFound);
+            }
+            return Ok(mapper.Map<KategorijaDto>(izv));
+        }
+
         [Authorize(Policy = "Zaposleni")]
         [HttpPost]
         [Consumes("application/json")]

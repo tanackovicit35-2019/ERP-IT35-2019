@@ -6,6 +6,8 @@ namespace BiletarnicaBack.Models
     public class KartaCreateDto
     {
         [Required]
+        public string nazivKarte { get; set; }
+        [Required]
         public DateTime datumOdrzavanja { get; set; }
         [Required]
         public int naStanju { get; set; }
@@ -17,5 +19,9 @@ namespace BiletarnicaBack.Models
         public int kategorijaID { get; set; }
         [ForeignKey("dogadjaj")]
         public int dogadjajID { get; set; }
+        [Required]
+        public string slika { get; set; }
+        
+
     }
 }

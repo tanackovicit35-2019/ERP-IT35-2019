@@ -6,6 +6,7 @@ namespace BiletarnicaBack.Repo
     {
         List<IzvodjacEntity> GetIzvodjac();
         IzvodjacEntity GetIzvodjacByID(int izvodjacID);
+        IzvodjacEntity GetPerformerByName(string nazivIzvodjaca);
         IzvodjacEntity CreateIzvodjac(IzvodjacEntity izvodjacEntity);
         void UpdateIzvodjac(IzvodjacEntity izvodjacEntity);
         void DeleteIzvodjac(int izvodjacID);

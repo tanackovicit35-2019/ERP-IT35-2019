@@ -2,10 +2,12 @@ import React, { useState, useEffect, useContext } from 'react'
 import style from "./auth.module.scss"
 import axios from "axios";
 import loginImg from "../../assets/login.jpg"
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { UserContext } from './UserContext'
 
+
 function Login() {
+  const navigate = useNavigate();
   const [korisnickoIme, setUsername] = useState("");
   const [lozinka, setPassword] = useState("");
   const { setIsLoggedIn } = useContext(UserContext);
@@ -35,23 +37,22 @@ function Login() {
       .post("https://localhost:44300/login", userdata)
       .then((result) => {
         if(result.data);
-        alert("Login successful");
         const korisnikID = result.data.response.korisnikID;
         localStorage.setItem("korisnikID", korisnikID);
         const role = result.data.response.role;
         localStorage.setItem("uloga", role);
         localStorage.setItem("token", result.data.response.token);
         if (role === "zaposleni") {
-          console.log("Employee");
+          navigate("/admin");
         } else if (role  === "kupac") {
-          console.log("User is customer");
+          navigate("/")
         }
-      
       })
       .catch((error) => {
-        alert(error);
+        alert("Error while trying to login");
       });
       setIsLoggedIn(true);
+
   };
 
 

@@ -19,5 +19,9 @@ namespace BiletarnicaBack.Models
         public int kategorijaID { get; set; }
         [ForeignKey("dogadjaj")]
         public int dogadjajID { get; set; }
+        public string slika { get; set; }
+        public string nazivKarte { get; set; }
+
+
     }
 }

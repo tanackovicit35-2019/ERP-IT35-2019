@@ -9,7 +9,7 @@ namespace BiletarnicaBack.Controllers
 {
     [Authorize]
     [ApiController]
-    [Route("/api/preformers")]
+    [Route("/api/performers")]
     public class IzvodjacController : Controller
     {
         private readonly IMapper mapper;
@@ -131,6 +131,18 @@ namespace BiletarnicaBack.Controllers
             {
                 return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred during deleting" + ex);
             }
+        }
+
+        [AllowAnonymous]
+        [HttpGet("/performers/name")]
+        public ActionResult<IzvodjacDto> GetPerformerByName(string nazivIzvodjaca)
+        {
+            IzvodjacEntity izv = izvodjacRepo.GetPerformerByName(nazivIzvodjaca);
+            if (izv == null)
+            {
+                return StatusCode(StatusCodes.Status404NotFound);
+            }
+            return Ok(mapper.Map<IzvodjacDto>(izv));
         }
 
         [HttpOptions]

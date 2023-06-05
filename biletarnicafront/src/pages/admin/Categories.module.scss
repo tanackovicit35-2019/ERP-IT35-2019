@@ -1,0 +1,46 @@
+.formadmin {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    margin: 0 auto;
+    height: fit-content;
+  }
+  
+  .labeladmin {
+    color: purple;
+      font-size: 1.2rem;
+      font-weight: 700;
+      float: center;
+      align-self: center;
+      padding-left: 0.5rem;
+      padding-bottom: 0.5rem;
+  }
+  
+  .inputadmin {
+    display: flex;
+    font-size: 1.6rem;
+    font-weight: 300;
+    padding: 0rem;
+    margin: 0rem auto;
+    width: 100%;
+    height: 40px;
+    border: 1px solid plum;
+    border-radius: 10px;
+    outline: none;
+
+  }
+  
+  .button {
+    padding: 0.5rem 1rem;
+    background-color: purple;
+    margin-bottom: 5px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: purple;
+  }
+  

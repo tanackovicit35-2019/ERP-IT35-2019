@@ -43,7 +43,23 @@ namespace BiletarnicaBack.Repo
             return context.stavkaPorudzbine.FirstOrDefault(r => r.stavkaID == stavkaID);
         }
 
+        public List<StavkaPorudzbineEntity> GetStavkaByPorudzbina(int porudzbinaID)
+        {
+            var list = from orderitem in context.stavkaPorudzbine
+                       join
+                       order in context.porudzbina on orderitem.porudzbinaID equals order.porudzbinaID
+                       where order.porudzbinaID == porudzbinaID
+                       select new StavkaPorudzbineEntity
+                       {
+                           stavkaID = orderitem.stavkaID,
+                           kolicina = orderitem.kolicina,
+                           cenaStavke = orderitem.cenaStavke,
+                           kartaID = orderitem.kartaID,
+                           porudzbinaID = orderitem.porudzbinaID
+                       };
+            return list.ToList();
 
+        }
 
         public StavkaPorudzbineEntity CreateStavka(StavkaPorudzbineEntity stavkaEntity)
         {
